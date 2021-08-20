@@ -33,8 +33,9 @@ const App = () => {
   };
 
   useEffect(() => {
-    const parsed = queryString.parse(window.location.pathname.split("/")[1]);
+    const parsed = queryString.parse(window.location.search);
     const { searchString, sy, ey } = parsed;
+    console.log(parsed);
     setSearch(searchString ? searchString : "");
     setStartYear(sy ? sy : "1990");
     setEndYear(ey ? ey : "2021");
@@ -55,7 +56,7 @@ const App = () => {
     console.log(location);
 
     if (location.search !== stringified) {
-      window.history.replaceState({}, "", "/marvel-app/" + stringified);
+      window.history.replaceState({}, "", "/marvel-app?" + stringified);
     }
   }, [search, startYear, endYear]);
 

@@ -26,7 +26,7 @@ const App = () => {
 
         const { results } = data;
         if (!results || !results.length) return;
-        
+
         setData(filterBySearch(results));
         setAll(results);
       });
@@ -52,9 +52,10 @@ const App = () => {
     });
 
     const { location } = window;
+    console.log(location);
 
     if (location.search !== stringified) {
-      window.history.replaceState({}, "", "/" + stringified);
+      window.history.replaceState({}, "", "/marvel-app/" + stringified);
     }
   }, [search, startYear, endYear]);
 

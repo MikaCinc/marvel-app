@@ -26,7 +26,7 @@ const App = () => {
 
         const { results } = data;
         if (!results || !results.length) return;
-        console.log("serach in fetch: ", search);
+        
         setData(filterBySearch(results));
         setAll(results);
       });
@@ -39,10 +39,6 @@ const App = () => {
     setStartYear(sy ? sy : "1990");
     setEndYear(ey ? ey : "2021");
   }, []);
-
-  useEffect(() => {
-    console.log("ey: ", endYear);
-  }, [endYear]);
 
   useEffect(() => {
     if ((!all || !all.length) && !isLoading && endYear && startYear) {

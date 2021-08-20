@@ -2,13 +2,8 @@
   --primary: #0070f3;
   --sharp-blues: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
   --sharp-blues-top-right: linear-gradient(to top right, #00c6fb 0%, #005bea 100%);
-  --new-life: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
-  --lily-meadow: linear-gradient(-225deg, #65379B 0%, #886AEA 53%, #6457C6 100%);
-  --fabled-sunset: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
-  --phoenix-start: linear-gradient(to right, #f83600 0%, #f9d423 100%);
-  --shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  --shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
   --mini-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
-  --no-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
 }
 
 input::placeholder {
@@ -35,8 +30,8 @@ input::placeholder {
 .searchContainer {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
   margin-top: 50px;
+  margin-bottom: 10px;
   width: 100%;
 }
 
@@ -77,4 +72,44 @@ input::placeholder {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.dateFilterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.dateFilterContainer>input {
+  width: 5ch;
+  border-radius: 10px;
+  border: 2px solid var(--primary);
+  height: 20px;
+  font-size: 18px;
+  padding: 10px;
+  color: black;
+  box-shadow: var(--mini-shadow);
+}
+
+.rangeDevider {
+  font-size: 24px;
+  margin: 0px 20px;
+}
+
+.filterButton {
+  border: 0px;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--sharp-blues-top-right);
+  color: white;
+  font-size: 18px;
+  margin-left: 20px;
+  box-shadow: var(--mini-shadow);
+  transition-duration: 0.4s;
+}
+
+.filterButton:hover {
+  box-shadow: var(--shadow);
 }
